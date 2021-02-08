@@ -147,5 +147,13 @@ buck-out/
 android/
 ios/
 
-.bin
-.lock
+*.bin
+*.lock
+
+.watchmanconfig
+.flowconfig
+.eslintrc.js
+.buckconfig
+babel.config.js
+metro.config.js
+.prettierrc.js
