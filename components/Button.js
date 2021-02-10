@@ -1,32 +1,36 @@
 import React from 'react';
-import {View, TouchableHighlight, Text, StyleSheet } from 'react-native';
+import {View, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 
 
 export default function Button(props) {    
     return (
-            <View>
-                <TouchableHighlight style={styles.button} onPress={props.onPress}>
-                    <Text style={styles.textStyle}>{props.name.toUpperCase()}</Text>
-                </TouchableHighlight>
-            </View>
+          <View style={styles.buttonLayout}>
+          <TouchableOpacity style={styles.button} onPress={props.onPress}>
+            <LinearGradient 
+              colors={['#307ecd','#307ecc']}
+              style={styles.buttonStyle}>
+                <Text style={styles.textStyle}>{props.name.toUpperCase()}</Text>
+            </LinearGradient>
+          </TouchableOpacity>
+          </View>
           );
 }
 
 const styles = StyleSheet.create({
-  button: {
-    width: "100%",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "powderblue",
-    marginBottom: 12,
-    paddingVertical: 12,
-    borderRadius: 4,
-    borderWidth: 0.5,
-    borderColor: "rgba(255,255,255,0.7)",
-  },
   textStyle: {
-    color: "grey",
-    textAlign: "center",
-    height: 20,
+    color: 'white',
+    fontWeight: 'bold'
   },
+  buttonLayout: {
+    alignItems: 'baseline',
+    marginTop: 30,
+  },
+  buttonStyle: {
+    width: 150,
+    height: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 50,
+  }
 });
