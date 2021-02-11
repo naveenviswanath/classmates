@@ -7,11 +7,15 @@ Pre-Requisite
 Ensure Android emulator is running on your machine
 
 a.Checkout the code to any folder
+
 b.Run the below commands from terminal to install the required react native libraries
+
     cd <foldername>
     yarn add react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view react-native-vector-icons react-native-elements
-    yarn add @react-navigation/native @react-navigation/stack @react-navigation/core @react-navigation/bottom-tabs
+    yarn add @react-navigation/native @react-navigation/stack @react-navigation/core @react-navigation/bottom-tabs @react-navigation/drawer
+    yarn add react-native-linear-gradient
     yarn add @react-native-community/async-storage
+    yarn add axios
     npx react-native link react-native-vector-icons
 
 c) Modify gradle-wrapper.properties to use version 6.3 or later
